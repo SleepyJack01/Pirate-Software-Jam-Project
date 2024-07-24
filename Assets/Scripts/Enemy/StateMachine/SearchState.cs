@@ -19,7 +19,7 @@ public class SearchState : EnemyState
         enemy.agent.speed = enemy.searchSpeed;
         
         time = enemy.searchTime;
-        delayRotationsTime = 0.0f;
+        delayRotationsTime = 1.0f;
 
         randomDirections[0] = enemy.transform.position + new Vector3(Random.Range(-10, 10), 0.0f, Random.Range(-10, 10));
         randomDirections[1] = enemy.transform.position + new Vector3(Random.Range(-10, 10), 0.0f, Random.Range(-10, 10));

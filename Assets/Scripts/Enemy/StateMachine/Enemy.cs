@@ -18,12 +18,16 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public NavMeshAgent agent;
     public Transform[] waypoints;
+    [HideInInspector]
     public int waypointIndex;
-    public float searchTime = 5.0f;
+    public float searchTime = 6.0f;
     public float pauseTime = 1.5f;
+    public float updateTargetDelay = 0.5f;
+    private float time;
 
     
     [Header("Player Detection")]
+    [HideInInspector]
     public Transform player;
     private FieldOfView fieldOfView;
     [HideInInspector]
@@ -83,12 +87,22 @@ public class Enemy : MonoBehaviour
     {
         if (CanSeePlayer())
         {
+            time = updateTargetDelay;
             target = player.position;
             targetLastKnownPosition = player.position;
         }
         else
         {
-            target = targetLastKnownPosition;
+            time -= Time.deltaTime;
+
+            if (time <= 0)
+            {
+                target = targetLastKnownPosition;
+            }
+            else
+            {
+                targetLastKnownPosition = player.position;
+            }
         }
     }
 
