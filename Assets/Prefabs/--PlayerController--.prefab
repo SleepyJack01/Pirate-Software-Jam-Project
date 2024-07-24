@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 9072992372394226155}
   - component: {fileID: 8114693176134970012}
   - component: {fileID: 8099141936145872096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: --PlayerController--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PotionCycle",
+                    "type": "PassThrough",
+                    "id": "a0d9f52e-b4a1-4c2c-8dc3-2bc620a5605c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -174,6 +183,72 @@
                     "action": "Menu Button",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Scroll Wheel Up/Down",
+                    "id": "e7f43275-4fd4-488a-9e5d-d3d098c5eb28",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PotionCycle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "4e583fa1-a073-417a-942a-a1355d013113",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "PotionCycle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "a1b876c7-03e2-4cbd-8c4d-5526e7970c85",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "PotionCycle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Dpad Left/Right",
+                    "id": "8a7a4a5d-6a72-468d-b3ca-9f1909dbb437",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PotionCycle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c5840df5-c5c6-45e1-b7ba-60b267f8d391",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PotionCycle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0a5ce272-69d3-4263-a6d4-62e67b16e648",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PotionCycle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

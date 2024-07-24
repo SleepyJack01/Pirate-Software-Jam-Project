@@ -2089,7 +2089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 20
-  viewAngle: 40
+  viewAngle: 50
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2236,6 +2236,11 @@ PrefabInstance:
     - target: {fileID: 8216913765267859469, guid: b430026460d3fda459a5072366c9d6f8,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072992372394226155, guid: b430026460d3fda459a5072366c9d6f8,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9072992372394226155, guid: b430026460d3fda459a5072366c9d6f8,
