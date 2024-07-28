@@ -62,6 +62,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PotionCycle"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""a0d9f52e-b4a1-4c2c-8dc3-2bc620a5605c"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -196,6 +205,72 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Menu Button"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Scroll Wheel Up/Down"",
+                    ""id"": ""e7f43275-4fd4-488a-9e5d-d3d098c5eb28"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""4e583fa1-a073-417a-942a-a1355d013113"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a1b876c7-03e2-4cbd-8c4d-5526e7970c85"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Dpad Left/Right"",
+                    ""id"": ""8a7a4a5d-6a72-468d-b3ca-9f1909dbb437"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c5840df5-c5c6-45e1-b7ba-60b267f8d391"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""0a5ce272-69d3-4263-a6d4-62e67b16e648"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PotionCycle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -236,6 +311,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_PlayerControls_Aim = m_PlayerControls.FindAction("Aim", throwIfNotFound: true);
         m_PlayerControls_Throw = m_PlayerControls.FindAction("Throw", throwIfNotFound: true);
         m_PlayerControls_MenuButton = m_PlayerControls.FindAction("Menu Button", throwIfNotFound: true);
+        m_PlayerControls_PotionCycle = m_PlayerControls.FindAction("PotionCycle", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -301,6 +377,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_Aim;
     private readonly InputAction m_PlayerControls_Throw;
     private readonly InputAction m_PlayerControls_MenuButton;
+    private readonly InputAction m_PlayerControls_PotionCycle;
     public struct PlayerControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -309,6 +386,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Aim => m_Wrapper.m_PlayerControls_Aim;
         public InputAction @Throw => m_Wrapper.m_PlayerControls_Throw;
         public InputAction @MenuButton => m_Wrapper.m_PlayerControls_MenuButton;
+        public InputAction @PotionCycle => m_Wrapper.m_PlayerControls_PotionCycle;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -330,6 +408,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @MenuButton.started += instance.OnMenuButton;
             @MenuButton.performed += instance.OnMenuButton;
             @MenuButton.canceled += instance.OnMenuButton;
+            @PotionCycle.started += instance.OnPotionCycle;
+            @PotionCycle.performed += instance.OnPotionCycle;
+            @PotionCycle.canceled += instance.OnPotionCycle;
         }
 
         private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -346,6 +427,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @MenuButton.started -= instance.OnMenuButton;
             @MenuButton.performed -= instance.OnMenuButton;
             @MenuButton.canceled -= instance.OnMenuButton;
+            @PotionCycle.started -= instance.OnPotionCycle;
+            @PotionCycle.performed -= instance.OnPotionCycle;
+            @PotionCycle.canceled -= instance.OnPotionCycle;
         }
 
         public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -387,5 +471,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnAim(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
         void OnMenuButton(InputAction.CallbackContext context);
+        void OnPotionCycle(InputAction.CallbackContext context);
     }
 }
