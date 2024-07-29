@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - debug
+  - Enemies
+  - Ground
+  - Decor
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -13,6 +18,7 @@ TagManager:
   - UI
   - Player
   - Door
+  - Potions
   - 
   - 
   - 
