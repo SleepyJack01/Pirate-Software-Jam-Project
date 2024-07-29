@@ -2145,7 +2145,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.768927, y: -5.596989, z: -7.470567}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4870052027880458}
@@ -2345,7 +2345,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336208832203922}
-  m_Mesh: {fileID: 4300000, guid: 74ee01352744a0f40a9f5021b0973b88, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6b20eec1cf821b54692c6c774acc368c, type: 3}
 --- !u!23 &23318856945679904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3513,15 +3513,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  TopLeft: {x: 4.751645, y: -5.617142, z: -7.465965}
-  TopRight: {x: 4.786209, y: -5.607783, z: -7.452937}
-  BottomLeft: {x: 4.751645, y: -5.5861955, z: -7.4881973}
-  BottomRight: {x: 4.786209, y: -5.576836, z: -7.4751697}
+  TopLeft: {x: -23.170416, y: 1.1193477, z: -23.34362}
+  TopRight: {x: -23.116796, y: 1.122561, z: -23.39768}
+  BottomLeft: {x: -23.170416, y: 1.1954236, z: -23.339098}
+  BottomRight: {x: -23.116796, y: 1.1986369, z: -23.393158}
   ExposedLiquidT: {fileID: 0}
   GravityDirection: {x: 0, y: -1, z: 0}
   normalizeGravityDirection: 1
   verts: []
-  cPos: {x: 4.768927, y: -5.596989, z: -7.470567}
+  cPos: {x: -23.143606, y: 1.1589923, z: -23.36839}
   finalAnchor: {x: 0, y: 0, z: 0}
   finalPoint: {x: 0, y: 0, z: 0}
   shaderNames: []
@@ -3693,7 +3693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4134131975092648
 Transform:
   m_ObjectHideFlags: 0

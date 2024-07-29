@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33853852110271472}
   - component: {fileID: 23283356605301358}
   - component: {fileID: 114245559354122894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PouringPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 23935233012252502}
   - component: {fileID: 54760913069858422}
   - component: {fileID: 64353389196696370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4356699034438970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Heart_Bottle_Smashed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 23090346247247148}
   - component: {fileID: 54694348586467160}
   - component: {fileID: 64836866789576026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 198804856605048068}
   - component: {fileID: 199424863367256550}
   - component: {fileID: 114679445719892798}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PouringParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5063,7 +5063,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5430f469fa23a2b4d8b2a73e3c9d0bda, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5142,7 +5141,7 @@ GameObject:
   - component: {fileID: 198705930653211692}
   - component: {fileID: 199725915920150496}
   - component: {fileID: 114933195021693912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smash_Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5172,7 +5171,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132077843529984}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -5247,8 +5246,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.1
+      scalar: 5
+      minScalar: 3.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5609,7 +5608,7 @@ ParticleSystem:
         m_RotationOrder: 0
     randomizeRotationDirection: 1
     gravitySource: 0
-    maxNumParticles: 100
+    maxNumParticles: 150
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5985,7 +5984,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 60
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -6043,7 +6042,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 60
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -6455,15 +6454,15 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 3470
-        atime2: 28142
+        atime1: 39899
+        atime2: 60331
         atime3: 65535
         atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 4
       minGradient:
@@ -9920,7 +9919,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 926d019fbb9e0134b9b50b9e8f98ac6e, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9999,7 +9997,7 @@ GameObject:
   - component: {fileID: 23218421280902434}
   - component: {fileID: 54538069566262354}
   - component: {fileID: 64215259018441302}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10134,7 +10132,7 @@ GameObject:
   - component: {fileID: 23834722797282012}
   - component: {fileID: 54812934634258716}
   - component: {fileID: 64516008343183034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10269,7 +10267,7 @@ GameObject:
   - component: {fileID: 23869887689068558}
   - component: {fileID: 54378737992228228}
   - component: {fileID: 64661805451804060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10404,7 +10402,7 @@ GameObject:
   - component: {fileID: 23269549449151950}
   - component: {fileID: 54341423766903444}
   - component: {fileID: 64238680694693036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10539,7 +10537,7 @@ GameObject:
   - component: {fileID: 23444917145756872}
   - component: {fileID: 54605207135326388}
   - component: {fileID: 64634511942189344}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Cork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10673,7 +10671,7 @@ GameObject:
   - component: {fileID: 65763252416674944}
   - component: {fileID: 114451259013218482}
   - component: {fileID: 54730480865591418}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: Absorber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10780,7 +10778,7 @@ GameObject:
   - component: {fileID: 23241193281806752}
   - component: {fileID: 54655021140830298}
   - component: {fileID: 64272037412448090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10914,7 +10912,7 @@ GameObject:
   - component: {fileID: 33208863914528102}
   - component: {fileID: 23497373434414582}
   - component: {fileID: 64569107720874108}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Heart_Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11021,7 +11019,7 @@ GameObject:
   - component: {fileID: 23391604085012740}
   - component: {fileID: 54789957614692896}
   - component: {fileID: 64368109075754962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11156,7 +11154,7 @@ GameObject:
   - component: {fileID: 23269827482043526}
   - component: {fileID: 54198366171756622}
   - component: {fileID: 64930921605975880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11291,7 +11289,7 @@ GameObject:
   - component: {fileID: 23532023723314586}
   - component: {fileID: 54233624134472968}
   - component: {fileID: 64148131275719348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11426,7 +11424,7 @@ GameObject:
   - component: {fileID: 23915883135665598}
   - component: {fileID: 54694282474229250}
   - component: {fileID: 64026810659094720}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11561,7 +11559,7 @@ GameObject:
   - component: {fileID: 23024510701138660}
   - component: {fileID: 54347454986523846}
   - component: {fileID: 64541309874714396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11696,7 +11694,7 @@ GameObject:
   - component: {fileID: 23636171003805810}
   - component: {fileID: 54914152974479220}
   - component: {fileID: 64237602237137974}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11831,7 +11829,7 @@ GameObject:
   - component: {fileID: 23749310112638140}
   - component: {fileID: 54855446476398424}
   - component: {fileID: 64395291198950908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11966,7 +11964,7 @@ GameObject:
   - component: {fileID: 23775429493264070}
   - component: {fileID: 54046037892782300}
   - component: {fileID: 64419016777524754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12101,7 +12099,7 @@ GameObject:
   - component: {fileID: 23723073496622724}
   - component: {fileID: 54105725639123804}
   - component: {fileID: 64481032235499380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12236,7 +12234,7 @@ GameObject:
   - component: {fileID: 23989617883642436}
   - component: {fileID: 54760962077468192}
   - component: {fileID: 64323545019764180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12371,7 +12369,7 @@ GameObject:
   - component: {fileID: 23745717553308540}
   - component: {fileID: 54860347755908886}
   - component: {fileID: 64625071475048956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12506,7 +12504,7 @@ GameObject:
   - component: {fileID: 23341499890153008}
   - component: {fileID: 114253937499099672}
   - component: {fileID: 114186179927084270}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Heart_Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12673,7 +12671,7 @@ GameObject:
   - component: {fileID: 23884574044403364}
   - component: {fileID: 54511168601883550}
   - component: {fileID: 64367202174137386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12806,7 +12804,7 @@ GameObject:
   - component: {fileID: 4001106583584542}
   - component: {fileID: 33771638063510592}
   - component: {fileID: 23318849126611658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeartLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12890,9 +12888,10 @@ GameObject:
   - component: {fileID: 54575990560527176}
   - component: {fileID: 114975215015888094}
   - component: {fileID: 114632013796631100}
-  m_Layer: 0
+  - component: {fileID: 8312207004669156007}
+  m_Layer: 7
   m_Name: HeartBottle
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12937,17 +12936,17 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 63
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &114975215015888094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12995,6 +12994,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 720
+--- !u!64 &8312207004669156007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927194576150874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 63
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1974140091907830
 GameObject:
   m_ObjectHideFlags: 0
@@ -13008,7 +13029,7 @@ GameObject:
   - component: {fileID: 23985496705067854}
   - component: {fileID: 54458702501059852}
   - component: {fileID: 64382277469801378}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

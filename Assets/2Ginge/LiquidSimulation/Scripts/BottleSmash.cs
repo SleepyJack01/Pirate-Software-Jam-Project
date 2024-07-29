@@ -6,7 +6,7 @@ public class BottleSmash : MonoBehaviour {
 
 	// Use this for initialization
     //all of the required items in order to gie the impression of hte glass breaking.
-    [ColorUsageAttribute(true, true, 0f, 8f, 0.125f, 3f)]
+    [ColorUsageAttribute(true, true)]
     public Color color;
     //to use to find any delta
     [SerializeField]
