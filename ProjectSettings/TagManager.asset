@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Decor
   - Potion
+  - EndGame
   layers:
   - Default
   - TransparentFX

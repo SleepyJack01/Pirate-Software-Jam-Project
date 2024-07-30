@@ -32,7 +32,11 @@ public class SpottedPlayerState : EnemyState
 
         enemy.agent.SetDestination(enemy.target);
 
-        if (!enemy.CanSeePlayer() && time <= 0.0f)
+        if (PlayerManager.isDead)
+        {
+            enemy.ChangeState(new PatrolState(enemy));
+        }
+        else if (!enemy.CanSeePlayer() && time <= 0.0f)
         {
             enemy.ChangeState(new SearchState(enemy));
         }

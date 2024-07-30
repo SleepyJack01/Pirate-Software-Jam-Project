@@ -74,7 +74,13 @@ public class FieldOfView : MonoBehaviour
 
     private void FindVisableTargets()
     {
+
         visibleTargets.Clear();
+
+        if (PlayerManager.isDead)
+        {
+            return;
+        }
 
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 

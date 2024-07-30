@@ -22,7 +22,12 @@ public class ChaseState : EnemyState
     {
         enemy.agent.SetDestination(enemy.target);
 
-        if (!enemy.CanSeePlayer())
+
+        if (PlayerManager.isDead)
+        {
+            enemy.ChangeState(new PatrolState(enemy));
+        }
+        else if (!enemy.CanSeePlayer())
         {
             enemy.agent.SetDestination(enemy.targetLastKnownPosition);
 
