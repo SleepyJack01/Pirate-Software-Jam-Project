@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Decor
   - Potion
+  - EndGame
   - StunPotion
   layers:
   - Default
@@ -20,8 +21,7 @@ TagManager:
   - Player
   - Door
   - Potions
-  - 
-  - 
+  - DoorOpener
   - 
   - 
   - 
