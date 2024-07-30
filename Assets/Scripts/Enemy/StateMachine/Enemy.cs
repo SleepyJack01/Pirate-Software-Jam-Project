@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class Enemy : MonoBehaviour
     public EnemyState currentState;
     public EnemyState previousState;
     public Animator animator;
+    public float stunTimer = 0f;
+    public float stunDuration = 3.0f;
 
     [Header("Movement Variables")]
     public float walkSpeed = 3.5f;
@@ -61,6 +64,7 @@ public class Enemy : MonoBehaviour
         previousState = currentState;
         currentState = newState;
         currentState.OnStateEnter();
+        Debug.Log($"Current state: {currentState.ToString()}");
     }
 
     private void Update()
@@ -131,6 +135,15 @@ public class Enemy : MonoBehaviour
         }
 
         waypointIndex = index;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("StunPotion"))
+        {
+            ChangeState(new StunState(this));
+        }
+
     }
 
     private void SetAnimatorSpeed()

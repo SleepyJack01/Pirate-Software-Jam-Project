@@ -10,6 +10,7 @@ TagManager:
   - Decor
   - Potion
   - EndGame
+  - StunPotion
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,6 @@ TagManager:
   - Door
   - Potions
   - DoorOpener
-  - 
   - 
   - 
   - 

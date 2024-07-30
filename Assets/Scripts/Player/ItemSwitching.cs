@@ -1,4 +1,6 @@
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ItemSwitching : MonoBehaviour
 {
@@ -15,6 +17,10 @@ public class ItemSwitching : MonoBehaviour
 
     bool readyToThrow;
 
+    public PlayerInput playerInput;
+    private InputAction ThrowAction;
+    private InputAction PotionCycleAction;
+
     void Start()
     {
         readyToThrow = true;
@@ -22,17 +28,34 @@ public class ItemSwitching : MonoBehaviour
 
     void Update()
     {
-        if (Input.mouseScrollDelta.y > 0)
+        if (ThrowAction == null)
         {
-            SwitchItem(1);  // Switch to the next item
+            ThrowAction = playerInput.actions["Throw"];
         }
-        else if (Input.mouseScrollDelta.y < 0)
+
+        if (PotionCycleAction == null)
         {
-            SwitchItem(-1);  // Switch to the previous item
+            PotionCycleAction = playerInput.actions["PotionCycle"];
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && readyToThrow)
+
+        // Proceed if actions are correctly assigned
+        if (ThrowAction != null && ThrowAction.triggered && readyToThrow)
         {
             Throw();
+        }
+
+        if (PotionCycleAction != null)
+        {
+            float cycleValue = PotionCycleAction.ReadValue<float>();
+
+            if (cycleValue > 0)
+            {
+                SwitchItem(1);  // Switch to the next item
+            }
+            else if (cycleValue < 0)
+            {
+                SwitchItem(-1);  // Switch to the previous item
+            }
         }
     }
 
@@ -80,5 +103,32 @@ public class ItemSwitching : MonoBehaviour
         else if (currentItemIndex < 0)
             currentItemIndex = items.Length - 1;
 
+        UpdateUI(); // Update UI after switching item
+
     }
+
+    void Awake()
+    {
+        playerInput.actions.FindActionMap("PlayerControls").Enable();
+    }
+
+    // Method to get the currently selected item
+    public Item GetCurrentItem()
+    {
+        if (items.Length == 0)
+            return null;
+
+        return items[currentItemIndex];
+    }
+
+    // Method to update the UI
+    private void UpdateUI()
+    {
+        Item currentItem = GetCurrentItem();
+        if (currentItem != null)
+        {
+            ItemUI.Instance.SetItem(currentItem.itemIcon);
+        }
+    }
+
 }
