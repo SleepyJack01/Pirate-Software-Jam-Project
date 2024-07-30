@@ -57,8 +57,12 @@ public class SearchState : EnemyState
                 delayRotationsTime -= Time.deltaTime;
             }
         }
-        
-        if (enemy.CanSeePlayer())
+
+        if (PlayerManager.isDead)
+        {
+            enemy.ChangeState(new PatrolState(enemy));
+        }
+        else if (enemy.CanSeePlayer())
         {
             enemy.ChangeState(new ChaseState(enemy));
         }

@@ -3,13 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 
 public class PauseMenu : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private GameObject firstSelectedButton;
     public static bool isPaused = false;
+
+    public void OnControlsSchemeChanged()
+    {
+        if (playerInput.currentControlScheme == "Keyboard & Mouse")
+        {
+            eventSystem.SetSelectedGameObject(null);
+        }
+        else if (playerInput.currentControlScheme == "Gamepad")
+        {
+            eventSystem.SetSelectedGameObject(firstSelectedButton);
+        }
+    }
 
     public void PauseGame()
     {
@@ -22,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        eventSystem.SetSelectedGameObject(null);
         isPaused = false;
     }
 

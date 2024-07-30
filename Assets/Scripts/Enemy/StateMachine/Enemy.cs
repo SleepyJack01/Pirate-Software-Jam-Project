@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [Header("State Controls")]
     public EnemyState currentState;
     public EnemyState previousState;
+    public Animator animator;
 
     [Header("Movement Variables")]
     public float walkSpeed = 3.5f;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public NavMeshAgent agent;
     public Transform[] waypoints;
+    public float[] waitTimes;
     [HideInInspector]
     public int waypointIndex;
     public float searchTime = 6.0f;
@@ -35,11 +37,16 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public Vector3 targetLastKnownPosition;
 
+    [Header("Animation Variables")]
+    private float xMovement;
+    private float zMovement;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         fieldOfView = GetComponent<FieldOfView>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponentInChildren<Animator>();
 
         ChangeState(new PatrolState(this));
     }
@@ -64,6 +71,7 @@ public class Enemy : MonoBehaviour
         }
 
         UpdateTarget();
+        SetAnimatorSpeed();
     }
     
     public void SetSpeed(float speed)
@@ -123,5 +131,17 @@ public class Enemy : MonoBehaviour
         }
 
         waypointIndex = index;
+    }
+
+    private void SetAnimatorSpeed()
+    {
+        Vector3 velocity = agent.velocity;
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+
+        xMovement = localVelocity.x;
+        zMovement = localVelocity.z;
+
+        animator.SetFloat("xMovement", xMovement);
+        animator.SetFloat("zMovement", zMovement);
     }
 }

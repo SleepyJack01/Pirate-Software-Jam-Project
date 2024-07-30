@@ -25,6 +25,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadMainMenu()
+    {
+        StartCoroutine(LoadLevel(0));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("FadeOut");

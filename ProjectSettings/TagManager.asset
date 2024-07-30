@@ -8,6 +8,8 @@ TagManager:
   - Enemies
   - Ground
   - Decor
+  - Potion
+  - EndGame
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
+  - Door
+  - Potions
+  - DoorOpener
   - 
   - 
   - 

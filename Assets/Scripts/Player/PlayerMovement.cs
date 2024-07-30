@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] Transform modelsTransform;
     [SerializeField] PlayerInput playerInput;
+    [SerializeField] Animator animator;
 
     [Header("Input Varibles")]
     private Vector2 currentMovementInput;
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float movementLerpTime = 6f;
     [SerializeField] float rotationSpeed = 15f;
+
+    [Header("Animation Variables")]
+    private float xMovement;
+    private float zMovement;
 
     [Header("Twin Stick Movement Settings")]
     [SerializeField] bool isGamepad;
@@ -78,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
         {
             MouseRotation();
         }
+
+        AnimateCharacter();
     }
 
      void ApplyGravity()
@@ -138,6 +145,18 @@ public class PlayerMovement : MonoBehaviour
             direction.y = 0;
             modelsTransform.rotation = Quaternion.Slerp(modelsTransform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotationSpeed);
         }
+    }
+
+    private void AnimateCharacter()
+    {
+        Vector3 velocity = controller.velocity;
+        Vector3 localVelocity = modelsTransform.InverseTransformDirection(velocity);
+
+        xMovement = localVelocity.x;
+        zMovement = localVelocity.z;
+
+        animator.SetFloat("xMovement", xMovement);
+        animator.SetFloat("zMovement", zMovement);
     }
 
     public void OnMove(InputAction.CallbackContext context)
