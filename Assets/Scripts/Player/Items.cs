@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public string itemName;
-    public Sprite icon;
+    public Sprite itemIcon;
     public GameObject itemPrefab;
 
     // Additional properties like damage, weight, etc., can be added here

@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 33853852110271472}
   - component: {fileID: 23283356605301358}
   - component: {fileID: 114245559354122894}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PouringPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4218151026527102
 Transform:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 23935233012252502}
   - component: {fileID: 54760913069858422}
   - component: {fileID: 64353389196696370}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4356699034438970}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Heart_Bottle_Smashed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 23090346247247148}
   - component: {fileID: 54694348586467160}
   - component: {fileID: 64836866789576026}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,13 +446,13 @@ GameObject:
   - component: {fileID: 198804856605048068}
   - component: {fileID: 199424863367256550}
   - component: {fileID: 114679445719892798}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PouringParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4123039682191550
 Transform:
   m_ObjectHideFlags: 0
@@ -5141,7 +5141,7 @@ GameObject:
   - component: {fileID: 198705930653211692}
   - component: {fileID: 199725915920150496}
   - component: {fileID: 114933195021693912}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Smash_Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,12 +5156,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132077843529984}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.70710814, y: -0, z: -0, w: 0.7071055}
+  m_LocalPosition: {x: -0.0001, y: -0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4480770158451704}
+  m_Father: {fileID: 4697445257274216}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &198705930653211692
 ParticleSystem:
@@ -8748,9 +8748,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -8819,7 +8819,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9997,7 +9997,7 @@ GameObject:
   - component: {fileID: 23218421280902434}
   - component: {fileID: 54538069566262354}
   - component: {fileID: 64215259018441302}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10132,7 +10132,7 @@ GameObject:
   - component: {fileID: 23834722797282012}
   - component: {fileID: 54812934634258716}
   - component: {fileID: 64516008343183034}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10267,7 +10267,7 @@ GameObject:
   - component: {fileID: 23869887689068558}
   - component: {fileID: 54378737992228228}
   - component: {fileID: 64661805451804060}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10402,7 +10402,7 @@ GameObject:
   - component: {fileID: 23269549449151950}
   - component: {fileID: 54341423766903444}
   - component: {fileID: 64238680694693036}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10537,9 +10537,10 @@ GameObject:
   - component: {fileID: 23444917145756872}
   - component: {fileID: 54605207135326388}
   - component: {fileID: 64634511942189344}
-  m_Layer: 7
+  - component: {fileID: 3621433618611304519}
+  m_Layer: 8
   m_Name: Cork
-  m_TagString: Untagged
+  m_TagString: StunPotion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10556,7 +10557,8 @@ Transform:
   m_LocalPosition: {x: 0.0001, y: 0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 4311417224055714}
   m_Father: {fileID: 4480770158451704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33420263468947072
@@ -10628,7 +10630,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -10649,15 +10651,36 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dd2de6bff5e72764aa9ba9c094f47068, type: 3}
+--- !u!135 &3621433618611304519
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308306527664912}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.23
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1392042045405570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10671,13 +10694,13 @@ GameObject:
   - component: {fileID: 65763252416674944}
   - component: {fileID: 114451259013218482}
   - component: {fileID: 54730480865591418}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Absorber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4630715830568360
 Transform:
   m_ObjectHideFlags: 0
@@ -10714,7 +10737,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -10757,7 +10780,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -10778,7 +10801,7 @@ GameObject:
   - component: {fileID: 23241193281806752}
   - component: {fileID: 54655021140830298}
   - component: {fileID: 64272037412448090}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10912,7 +10935,7 @@ GameObject:
   - component: {fileID: 33208863914528102}
   - component: {fileID: 23497373434414582}
   - component: {fileID: 64569107720874108}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Heart_Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10997,7 +11020,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -11019,7 +11042,7 @@ GameObject:
   - component: {fileID: 23391604085012740}
   - component: {fileID: 54789957614692896}
   - component: {fileID: 64368109075754962}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11154,7 +11177,7 @@ GameObject:
   - component: {fileID: 23269827482043526}
   - component: {fileID: 54198366171756622}
   - component: {fileID: 64930921605975880}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11289,7 +11312,7 @@ GameObject:
   - component: {fileID: 23532023723314586}
   - component: {fileID: 54233624134472968}
   - component: {fileID: 64148131275719348}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11424,7 +11447,7 @@ GameObject:
   - component: {fileID: 23915883135665598}
   - component: {fileID: 54694282474229250}
   - component: {fileID: 64026810659094720}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11559,7 +11582,7 @@ GameObject:
   - component: {fileID: 23024510701138660}
   - component: {fileID: 54347454986523846}
   - component: {fileID: 64541309874714396}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11694,7 +11717,7 @@ GameObject:
   - component: {fileID: 23636171003805810}
   - component: {fileID: 54914152974479220}
   - component: {fileID: 64237602237137974}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11829,7 +11852,7 @@ GameObject:
   - component: {fileID: 23749310112638140}
   - component: {fileID: 54855446476398424}
   - component: {fileID: 64395291198950908}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11964,7 +11987,7 @@ GameObject:
   - component: {fileID: 23775429493264070}
   - component: {fileID: 54046037892782300}
   - component: {fileID: 64419016777524754}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12099,7 +12122,7 @@ GameObject:
   - component: {fileID: 23723073496622724}
   - component: {fileID: 54105725639123804}
   - component: {fileID: 64481032235499380}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12234,7 +12257,7 @@ GameObject:
   - component: {fileID: 23989617883642436}
   - component: {fileID: 54760962077468192}
   - component: {fileID: 64323545019764180}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12369,7 +12392,7 @@ GameObject:
   - component: {fileID: 23745717553308540}
   - component: {fileID: 54860347755908886}
   - component: {fileID: 64625071475048956}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12504,7 +12527,7 @@ GameObject:
   - component: {fileID: 23341499890153008}
   - component: {fileID: 114253937499099672}
   - component: {fileID: 114186179927084270}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Heart_Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12671,7 +12694,7 @@ GameObject:
   - component: {fileID: 23884574044403364}
   - component: {fileID: 54511168601883550}
   - component: {fileID: 64367202174137386}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12804,7 +12827,7 @@ GameObject:
   - component: {fileID: 4001106583584542}
   - component: {fileID: 33771638063510592}
   - component: {fileID: 23318849126611658}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: HeartLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12889,7 +12912,7 @@ GameObject:
   - component: {fileID: 114975215015888094}
   - component: {fileID: 114632013796631100}
   - component: {fileID: 8312207004669156007}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: HeartBottle
   m_TagString: Potion
   m_Icon: {fileID: 0}
@@ -12913,7 +12936,6 @@ Transform:
   - {fileID: 4001106583584542}
   - {fileID: 4772758184617014}
   - {fileID: 4676518209139912}
-  - {fileID: 4311417224055714}
   - {fileID: 4356699034438970}
   - {fileID: 4123039682191550}
   - {fileID: 4630715830568360}
@@ -12936,10 +12958,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 191
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -12967,7 +12989,7 @@ MonoBehaviour:
   Glass: {fileID: 1432654053445556}
   Glass_Shattered: {fileID: 1093758513551360}
   Label: {fileID: 1871326847637086}
-  DespawnTime: 5
+  DespawnTime: 10
   Effect: {fileID: 198705930653211692}
   Splat: {fileID: 1569978052003978, guid: 4c3152ca08b746546b868824e5f4be87, type: 3}
   SplatMask:
@@ -12988,7 +13010,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927194576150874}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f311986f616e27b4e821fd1db2a5ae89, type: 3}
   m_Name: 
@@ -13004,10 +13026,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 191
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -13029,7 +13051,7 @@ GameObject:
   - component: {fileID: 23985496705067854}
   - component: {fileID: 54458702501059852}
   - component: {fileID: 64382277469801378}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

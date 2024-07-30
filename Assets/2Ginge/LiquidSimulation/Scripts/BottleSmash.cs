@@ -5,7 +5,7 @@ using UnityEngine;
 public class BottleSmash : MonoBehaviour {
 
 	// Use this for initialization
-    //all of the required items in order to gie the impression of hte glass breaking.
+    //all of the required items in order to gie the impression of the glass breaking.
     [ColorUsageAttribute(true, true)]
     public Color color;
     //to use to find any delta
@@ -23,11 +23,11 @@ public class BottleSmash : MonoBehaviour {
     public float DespawnTime = 5.0f;
     //splash effect.
     public ParticleSystem Effect;
-    //3D mesh on hte ground (given a specific height).
+    //3D mesh on the ground (given a specific height).
     public GameObject Splat;
     //such as the ground layer otherwise the broken glass could be considered the 'ground'
     public LayerMask SplatMask;
-    //distance of hte raycast
+    //distance of the raycast
     public float maxSplatDistance = 5.0f;
     //if the change in velocity is greater than this THEN it breaks
     public float shatterAtSpeed = 2.0f;
@@ -54,19 +54,21 @@ public class BottleSmash : MonoBehaviour {
     float collidedRecently = -1;
 	void Start () {
         previousPos = transform.position;
-	}
-	//Smash function so it can be tied to buttons.
+    }
+
+    //Smash function so it can be tied to buttons.
     public void RandomizeColor()
     {
         color = new Color(Random.Range(0, 1), Random.Range(0, 1), Random.Range(0, 1), 1);
     }
     void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log($"Collided with: {collision.gameObject.name}");
         //set a timer for about 0.2s to be able to be broken
-        _lastHitSpeed = collision.impulse.magnitude;
+       _lastHitSpeed = collision.impulse.magnitude;
         if (collision.transform.tag != "Liquid")
             collidedRecently = 0.2f;
-        
+
     }
 
     public void AttemptCollision(Collision col)
