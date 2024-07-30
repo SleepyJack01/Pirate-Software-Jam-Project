@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  stunTimer: 0
+  stunDuration: 3
   walkSpeed: 3
   searchSpeed: 4.5
   chaseSpeed: 6
@@ -214,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8068660980554266628
 Transform:
   m_ObjectHideFlags: 0
@@ -332,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3008246828340587906
 Transform:
   m_ObjectHideFlags: 0
